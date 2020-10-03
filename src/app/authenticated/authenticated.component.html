@@ -1,0 +1,29 @@
+<div class="w-100 vh-100">
+  <nav class="navbar navbar-expand-sm bg-dark text-light navbar-dark">
+    <div class="navbar-header w-100">
+        <a class="navbar-brand" href="#">LogicalWings</a>
+        <small class="text-muted">(Logic is our Red-Bull, Coz it gives us wings. 😜)</small>
+        <p class="float-right my-2">
+          <label>{{userfullname}} <span class="badge badge-danger" *ngIf="pendingCounts">{{pendingCounts}}</span></label>&nbsp; &nbsp;| <button class="btn btn-link" (click)="logout()">Logout</button>
+        </p>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-sm-2 bg-dark text-light vh-100">
+        <ul class="list-group list-group-flush bg-dark">
+            <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/dashboard']">
+              💻 Dashboard
+              <span class="badge badge-danger" *ngIf="pendingCounts">{{pendingCounts}}</span>
+              <!-- <app-counter-badge></app-counter-badge> -->
+              <!-- Tried hard to implement seperate component for it but got stuck with nested modules -->
+            </li>
+            <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/work-categories']">✔️ Work Categories</li>
+            <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/workers']">💼 Workers</li>
+        </ul>
+    </div>
+    <div class="col-sm-10">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

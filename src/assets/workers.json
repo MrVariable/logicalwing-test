@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "category": "Intern",
+        "gender": "Male"
+    },
+    {
+        "id": 2,
+        "name": "Sarah Joseph",
+        "category": "Intern",
+        "gender": "Female"
+    },
+    {
+        "id": 3,
+        "name": "Jammie Foxx",
+        "category": "Junior Developer",
+        "gender": "Male"
+    },
+    {
+        "id": 4,
+        "name": "Jay Sahoo",
+        "category": "Project Manager",
+        "gender": "Male"
+    },
+    {
+        "id": 5,
+        "name": "Lauren Gabbrial",
+        "category": "Team Leader",
+        "gender": "Female"
+    },
+    {
+        "id": 6,
+        "name": "Vivek Patel",
+        "category": "User Experience Engineer",
+        "gender": "Male"
+    },
+    {
+        "id": 7,
+        "name": "Alpine Alex",
+        "category": "Junior Developer",
+        "gender": "Male"
+    },
+    {
+        "id": 8,
+        "name": "Jay Prakash",
+        "category": "Junior Developer",
+        "gender": "Male"
+    },
+    {
+        "id": 9,
+        "name": "Zing Vi Kung",
+        "category": "Senior Developer",
+        "gender": "Male"
+    },
+    {
+        "id": 10,
+        "name": "Ohaayo Naavedo",
+        "category": "User Interface Designer",
+        "gender": "Female"
+    },
+    {
+        "id": 11,
+        "name": "Hennry Banner",
+        "category": "User Interface Designer",
+        "gender": "Male"
+    }
+]

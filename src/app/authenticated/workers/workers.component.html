@@ -1,0 +1,38 @@
+<div class="card-columns my-3">
+  <div class="card bg-dark text-light" (click)="toggleModal(true)" data-toggle="modal" data-target="#myModal">
+    <div class="card-body text-center">
+      <h5>All</h5>
+      <hr style="border-color: #ffffff" />
+      <h1>{{workers.length}}</h1>
+    </div>
+  </div>
+  <div class="card bg-dark text-light cursor-pointer" *ngFor="let key of catKeys(); let idx = index"
+    (click)="toggleModal(true, key)">
+    <div class="card-body text-center">
+      <h5>{{key}}</h5>
+      <hr style="border-color: #ffffff" />
+      <h1>{{categories[key].length}}</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal modal-sm" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Workers</h4>
+        <button type="button" class="close" data-dismiss="modal" (click)="toggleModal(false)">&times;</button>
+      </div>
+
+      <div class="modal-body">
+          <div class="list-group-item list-group-item-action text-light bg-dark" *ngFor="let worker of workersToShow; let idx = index;">
+            <span>{{worker.name}}</span>
+            <span class="float-right">{{worker.gender === 'Male' ? '👨' : '👩'}}</span>
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>

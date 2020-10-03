@@ -1,0 +1,9 @@
+<div class="d-flex ">
+    <div class="list-group my-2">
+      <h3>{{pendingTasks.length ? 'Pending...' : 'Nothing Pending. See more dreams. 😄'}}</h3>
+      <div class="list-group-item list-group-item-action text-light bg-dark" *ngFor="let task of pendingTasks; let idx = index;">
+        <input type="checkbox" name=pendingTask{{idx}} (change)="markDone(idx)"/>&nbsp;
+        {{task.task}}
+      </div>
+    </div>
+</div>

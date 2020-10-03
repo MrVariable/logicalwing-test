@@ -1,0 +1,22 @@
+<div class="table-responsive">
+    <h2>Categories</h2>
+    <table class="table table-sm table-dark table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Category</th>
+          <th>No. of Workers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let key of catKeys(); let idx = index">
+        <td>{{idx + 1}}</td>
+        <td>{{key}}</td>
+        <td>{{categories[key].length}}</td>
+        </tr>        
+      </tbody>
+      <tfoot>
+        <label class="text-muted m-2 font-weight-bold">Total workers: {{workers.length}}</label>
+      </tfoot>
+    </table>
+</div>

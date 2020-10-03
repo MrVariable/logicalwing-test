@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="login-box">
+    <img src="assets/unnamed.png" class="img img-responsive"/>
+  <div class="card text-white bg-dark mt-3 " style="max-width: 18rem;">
+    <div class="card-header">
+      <h3>Welcome Back. 👋</h3>
+      <h4>Please Login Yourself.</h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="loginForm">
+          <div class="form-control-group">
+              <label class="label" for="username">Username *</label>
+              <input name="username" id="username" placeholder="Enter your username." 
+                class="form-control" formControlName="username"  autofocus required>
+              <ng-container *ngIf="loginform.username.touched && loginform.username.errors">
+                  <p class="text-danger" *ngIf="loginform.username.errors.required">
+                      Username is required!
+                  </p>
+              </ng-container>
+          </div>
+
+          <div class="form-control-group mt-4">
+            <label class="label" for="password">Password *</label>
+            <input name="password" type="password" id="password" placeholder="Enter your password.s" 
+              class="form-control" formControlName="password"  required>
+              <ng-container *ngIf="loginform.password.touched && loginform.password.errors">
+                <p class="text-danger" *ngIf="loginform.password.errors.required">
+                  Password is required!
+                </p>
+              </ng-container>
+          </div>
+
+          <div class="form-control-group mt-4">
+            <button class="btn btn-primary btn-block" type="button" [disabled]="!loginForm.valid"
+              (click)="login()" *ngIf="!isDataLoading">Login</button>
+            <button class="btn btn-primary btn-block" type="button" disabled *ngIf="isDataLoading">
+                <span class="spinner-border spinner-border-sm"></span>
+                Loading..
+            </button>
+          </div>
+      </form>
+    </div>
+  </div></div>
+</div>
