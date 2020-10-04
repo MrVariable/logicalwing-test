@@ -4,7 +4,7 @@
         <a class="navbar-brand" href="#">LogicalWings</a>
         <small class="text-muted">(Logic is our Red-Bull, Coz it gives us wings. 😜)</small>
         <p class="float-right my-2">
-          <label>{{userfullname}} <span class="badge badge-danger" *ngIf="pendingCounts">{{pendingCounts}}</span></label>&nbsp; &nbsp;| <button class="btn btn-link" (click)="logout()">Logout</button>
+          <label>{{userfullname}} <app-counter-badge></app-counter-badge></label>&nbsp; &nbsp;| <button class="btn btn-link" (click)="logout()">Logout</button>
         </p>
     </div>
   </nav>
@@ -13,9 +13,7 @@
         <ul class="list-group list-group-flush bg-dark">
             <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/dashboard']">
               💻 Dashboard
-              <span class="badge badge-danger" *ngIf="pendingCounts">{{pendingCounts}}</span>
-              <!-- <app-counter-badge></app-counter-badge> -->
-              <!-- Tried hard to implement seperate component for it but got stuck with nested modules -->
+              <app-counter-badge></app-counter-badge>
             </li>
             <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/work-categories']">✔️ Work Categories</li>
             <li class="list-group-item bg-dark cursor-pointer" [routerLink]="['/workers']">💼 Workers</li>

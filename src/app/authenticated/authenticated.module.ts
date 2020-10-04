@@ -6,6 +6,7 @@ import { AuthenticatedComponent } from './authenticated.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { WorkCategoriesComponent } from './work-categories/work-categories.component';
 import { WorkersComponent } from './workers/workers.component';
+import { CounterBadgeComponent } from '../common/counter-badge/counter-badge.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { WorkersComponent } from './workers/workers.component';
     DashboardComponent,
     WorkCategoriesComponent,
     WorkersComponent,
+    CounterBadgeComponent
   ],
   imports: [
     CommonModule,
